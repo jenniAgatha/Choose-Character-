@@ -1,35 +1,146 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Carrossel</title>
 </head>
 <body>
-  <input type="radio" name="position" checked />
-  <input type="radio" name="position" />
-  <input type="radio" name="position" />
-  <input type="radio" name="position" />
-  <input type="radio" name="position" />
-  <main id="carousel">
-    <div class="item">
-        <img class="img" src="Daggerheart Character Art.jfif" alt="Druta?>
+
+
+
+  <main>
+    <div class="carrossel">
+      <img class="active amarelo" src="Deusa.jfif" alt="Deusa" id="amarelo">
+    <img src="druit.jfif" alt="" class="verde" id="verde">
+      <img src="Fada.jfif" alt="Fada" class="roxo" id="roxo">
+      <img src="download (5).jfif" alt="Imagem 4" class="azul" id="azul">
+      <img src="Guerreira.jfif" alt="Imagem 5" class="branco" id="branco">
     </div>
 
-    <div class="item">
-     <img class="img" src="warrior wallpaper.jfif" alt="">
-    </div>
-    <div class="item">
-           <img class="img" src="download (4).jfif" alt="A fantasy character stands confidently in detailed armor holding a staff, set against a mystical forest background with soft light filtering through the trees, conveying a sense of adventure and determination">
-    </div>
-    <div class="item">
-        <img class="img" src="download (5).jfif" alt="">
-    </div>
+    <button id="passar">Próxima imagem ➜</button>
+  </main>
 
-    <div class="item">
-        <img class="img" src="Belona Berenice Magnólia Delfin.jfif" alt="">
-          </div>
-    <main>
+  <script>
+    const imagens = document.querySelectorAll('.carrossel img');
+    const botao = document.getElementById('passar');
+    let indice = 0;
+
+    botao.addEventListener('click', () => {
+      imagens[indice].classList.remove('active');
+      indice = (indice + 1) % imagens.length;
+      imagens[indice].classList.add('active');
+    });
+const imagem = document.getElementById('amarelo');
+
+imagem.addEventListener('mouseover', () => {
+    imagem.classList.add('flutuando');
+  imagem.style.borderColor = '#FFF394';
+  imagem.style.boxShadow = '0 0 20px #FFF394, 0 0 40px #FFF394';
+  imagem.style.outline = 'none';
+ 
+  
+});
+
+imagem.addEventListener('mouseout', () => {
+    imagem.classList.remove('flutuando');
+  imagem.style.borderColor = 'transparent';
+  imagem.style.boxShadow = 'none';
+  document.body.style.background ='#111';
+});
+
+
+
+const img2 =document.getElementById('verde')
+img2.addEventListener('mouseover',() =>{
+  img2.classList.add('flutuando');
+  img2.style.borderColor ='#568E3F'
+
+  img2.style.boxShadow='0 0 20px #568E3F, 0 0 40px #568E3F';
+  img2.style.outline='none';
+
+})
+
+
+
+img2.addEventListener('mouseout', () =>{
+  img2.classList.remove('flutuando');
+  img2.style.borderColor = 'transparent';
+  img2.style.boxShadow = 'none';
+  img2.body.style.background ='#111';
+});
+
+
+
+
+const img3 =document.getElementById('roxo')
+img3.addEventListener('mouseover',() =>{
+  img3.classList.add('flutuando');
+  img3.style.borderColor ='#5A189A'
+
+  img3.style.boxShadow='0 0 20px #5A189A, 0 0 40px #5A189A';
+  img3.style.outline='none';
+
+})
+
+
+
+img3.addEventListener('mouseout', () =>{
+  img3.classList.remove('flutuando');
+  img3.style.borderColor = 'transparent';
+  img3.style.boxShadow = 'none';
+  img3.body.style.background ='#111';
+});
+
+
+
+const img4 =document.getElementById('azul')
+img4.addEventListener('mouseover',() =>{
+  img4.classList.add('flutuando');
+  img4.style.borderColor ='#8FB3E2'
+
+  img4.style.boxShadow='0 0 20px #8FB3E2, 0 0 40px #8FB3E2';
+  img4.style.outline='none';
+
+})
+
+
+
+img4.addEventListener('mouseout', () =>{
+  img4.classList.remove('flutuando');
+  img4.style.borderColor = 'transparent';
+  img4.style.boxShadow = 'none';
+  img4.body.style.background ='#111';
+});
+
+
+
+const img5 =document.getElementById('branco')
+img5.addEventListener('mouseover',() =>{
+  img5.classList.add('flutuando');
+  img5.style.borderColor ='#1E2E4F'
+
+  img5.style.boxShadow='0 0 20px #1E2E4F, 0 0 40px #1E2E4F';
+  img5.style.outline='none';
+
+})
+
+
+
+img5.addEventListener('mouseout', () =>{
+  img5.classList.remove('flutuando');
+  img5.style.borderColor = 'transparent';
+  img5.style.boxShadow = 'none';
+  img5.body.style.background ='#111';
+});
+
+
+
+
+
+  </script>
+
 </body>
 </html>
+
